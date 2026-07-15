@@ -1,0 +1,48 @@
+{
+  "best_model": "Random Forest",
+  "roc_auc": 0.9948672566371681,
+  "threshold": 0.16,
+  "selected_feature_columns": [
+    "mean",
+    "std",
+    "min",
+    "max",
+    "median",
+    "skew",
+    "kurtosis",
+    "q25",
+    "q75",
+    "energy",
+    "zero_crossings",
+    "fft_mean",
+    "fft_peak_freq",
+    "num_peaks",
+    "peak_mean",
+    "peak_min",
+    "mean_abs_diff",
+    "diff_energy"
+  ],
+  "dropped_correlated_features": [
+    "range",
+    "iqr",
+    "mad",
+    "rms",
+    "fft_std",
+    "fft_max",
+    "fft_p90",
+    "fft_p95",
+    "fft_p99",
+    "peak_std",
+    "peak_max",
+    "std_diff",
+    "max_abs_diff"
+  ],
+  "train_shape": [
+    5087,
+    3197
+  ],
+  "test_shape": [
+    570,
+    3197
+  ]
+}
