@@ -1,102 +1,107 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python&logoColor=white"/>
   <img src="https://img.shields.io/badge/Scikit--learn-Machine%20Learning-orange?style=for-the-badge&logo=scikitlearn&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Random%20Forest-Classification-green?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Ensemble-Learning-purple?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Signal-Processing-blueviolet?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Feature-Engineering-teal?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge"/>
 </p>
 
 <h1 align="center">Exoplanet Classification Using Ensemble Learning</h1>
 
 <p align="center">
-  Advanced Machine Learning Framework for Exoplanet Detection Using Stellar Light Curves
+  Advanced Machine Learning Framework for Exoplanet Classification
+  Using Statistical Feature Engineering and Ensemble Models
 </p>
 
 <p align="center">
-  Statistical Feature Engineering • Fourier Transform Analysis • Correlation-Based Feature Reduction • Ensemble Classification
+  Signal Feature Extraction • Correlation-Based Feature Reduction •
+  Ensemble Classification • Model Evaluation
 </p>
 
 ---
 
 ## Overview
 
-**Exoplanet Classification Using Ensemble Learning** is a machine learning project designed to distinguish stars with confirmed exoplanets from non-exoplanet stars using stellar brightness measurements recorded over time.
+**Exoplanet Classification Using Ensemble Learning** is a machine learning project focused on classifying astronomical observations using engineered statistical and signal-derived features.
 
-The project analyzes stellar light curves derived from the Kepler space telescope dataset. Rather than relying exclusively on raw flux measurements, the pipeline extracts statistical, frequency-domain, peak-based, and signal-variation features to represent the underlying characteristics of each light curve.
+The project implements a structured classification workflow that transforms high-dimensional input measurements into a compact feature representation. It combines statistical descriptors, frequency-domain characteristics, peak-based measurements, and signal-difference features to represent patterns in the input data.
 
-The workflow combines feature engineering, correlated-feature removal, feature scaling, and comparative evaluation of multiple classification algorithms. A Random Forest classifier is persisted alongside preprocessing artifacts to support reproducible inference.
+The workflow incorporates correlation-based feature reduction, feature scaling, comparative model evaluation, and ensemble learning. A trained Random Forest classifier is persisted alongside preprocessing artifacts and metadata to support reproducible model usage.
 
 The repository demonstrates an end-to-end applied machine learning workflow covering:
 
-- Stellar light-curve data preprocessing
-- Statistical and signal-based feature engineering
-- Fourier Transform-based frequency analysis
-- Peak detection and signal variability analysis
-- Correlated-feature identification and removal
-- Feature scaling and feature selection
-- Comparative evaluation of classical machine learning models
-- Weighted voting and stacking ensemble experiments
-- Threshold analysis and classification evaluation
-- Ablation studies and noise robustness experiments
-- Model persistence and metadata export
+- Data preprocessing and feature preparation
+- Statistical feature engineering
+- Fourier Transform-based feature extraction
+- Peak-based and signal-difference analysis
+- Correlation-based feature reduction
+- Feature scaling and column management
+- Comparative evaluation of classification algorithms
+- Voting and stacking ensemble experiments
+- Classification threshold analysis
+- Feature-group ablation experiments
+- Noise robustness evaluation
+- Model persistence and experiment result export
 
-The project focuses on machine learning-assisted exoplanet classification using preprocessed photometric time-series data.
+The notebook is the primary implementation and experimentation interface. The repository also contains serialized model artifacts and exported evaluation results.
 
 ---
 
 ## Why This Project Matters
 
-Detecting exoplanets from stellar observations is challenging because planetary transits can produce subtle changes in the brightness of a host star. These changes may be obscured by observational noise, stellar variability, and other sources of signal variation.
+Machine learning can help analyze complex astronomical observations by identifying statistical patterns and relationships within measured signals.
 
-Machine learning can help identify patterns in stellar brightness measurements by learning relationships between extracted signal characteristics and known classification labels.
+Classification of astronomical time-series data presents several challenges, including high-dimensional inputs, potentially redundant features, subtle signal characteristics, and the need to evaluate model performance beyond overall accuracy.
 
-This project investigates how statistical descriptors, frequency-domain features, signal peaks, and ensemble learning can be used to construct a classification workflow for exoplanet detection.
+This project explores how engineered signal representations, feature reduction, and ensemble learning can be combined in a conventional machine learning pipeline.
+
+The objective is to investigate the effectiveness of different classification algorithms and feature representations for exoplanet-related classification tasks.
 
 ### Potential Applications
 
+- Astronomical time-series classification
 - Exoplanet detection research
-- Stellar light-curve classification
-- Astronomical time-series analysis
+- Signal characterization and analysis
 - Machine learning-assisted candidate screening
-- Photometric signal characterization
 - Feature engineering for scientific datasets
 - Comparative evaluation of classification algorithms
-- Research and experimentation in computational astrophysics
+- Research in computational astrophysics
 
-The model provides predictions based on the patterns present in its training data. It does not independently confirm the existence of an exoplanet or replace astronomical validation.
+Model predictions represent statistical classifications learned from the training data. They do not independently establish the existence of an exoplanet or replace scientific validation.
 
 ---
 
 ## Key Technical Highlights
 
-- End-to-end supervised machine learning workflow
-- Classification using Kepler stellar flux measurements
-- Statistical feature extraction from time-series signals
-- Fourier Transform-based frequency-domain feature generation
-- Peak-based characterization of stellar light curves
-- Signal energy and consecutive-difference analysis
-- Correlation-based feature reduction
+- End-to-end supervised classification workflow
+- Statistical feature extraction from high-dimensional input signals
+- Frequency-domain analysis using Fourier Transform features
+- Peak-based signal characterization
+- Consecutive-observation difference analysis
+- Correlation-based removal of redundant features
 - Standardized feature transformations
-- Random Forest classification with persisted model artifacts
-- Comparative experiments involving XGBoost, CatBoost, LightGBM, and Logistic Regression
-- Weighted voting and stacking ensemble evaluation
-- Classification threshold configuration
-- Ablation analysis across different feature groups
-- Noise robustness evaluation at multiple perturbation levels
-- Exported model comparison and experiment results
+- Random Forest classifier with persisted model artifacts
+- Comparative evaluation of multiple classification algorithms
+- XGBoost, CatBoost, and LightGBM model experiments
+- Logistic Regression baseline
+- Soft voting, weighted voting, and stacking ensemble experiments
+- Classification probability threshold configuration
+- Feature-group ablation analysis
+- Noise robustness experiments
+- Exported model metrics and pipeline metadata
 
 ---
 
 ## Research Contributions
 
-- Engineered statistical and signal-processing features from stellar light curves.
-- Combined time-domain statistics with frequency-domain and peak-based descriptors.
-- Applied correlation analysis to reduce redundant engineered features.
-- Compared multiple classical machine learning algorithms using consistent evaluation metrics.
-- Evaluated voting and stacking ensembles against individual classifiers.
-- Examined the effect of feature groups through ablation experiments.
-- Investigated prediction robustness under different levels of injected noise.
-- Persisted the trained classifier and supporting preprocessing metadata for subsequent inference.
+- Developed statistical and signal-derived features to represent input observations.
+- Combined distribution statistics with frequency-domain, peak-based, and difference-based descriptors.
+- Applied correlation-based reduction to remove redundant engineered features.
+- Compared individual classifiers and ensemble configurations using multiple evaluation metrics.
+- Examined the influence of different feature groups through ablation experiments.
+- Evaluated recorded model performance under different injected noise levels.
+- Persisted the selected classifier, scaling transformation, feature metadata, and classification threshold.
 
 ---
 
@@ -104,19 +109,19 @@ The model provides predictions based on the patterns present in its training dat
 
 | Component | Purpose |
 |---|---|
-| Statistical Feature Engineering | Captures the distribution and variability of stellar flux measurements |
-| Fourier Transform Analysis | Extracts frequency-domain characteristics from the light curve |
-| Peak-Based Features | Represents detected signal peaks and their characteristics |
-| Difference-Based Features | Measures changes between consecutive flux observations |
-| Correlation Analysis | Identifies redundant engineered features |
+| Statistical Feature Engineering | Captures distribution and variability characteristics |
+| Fourier Transform Analysis | Extracts frequency-domain information |
+| Peak-Based Features | Characterizes detected peaks in the input signal |
+| Difference-Based Features | Represents changes between consecutive measurements |
+| Correlation Analysis | Identifies and removes redundant features |
 | StandardScaler | Standardizes selected feature values |
-| Random Forest | Provides the persisted classification model |
-| XGBoost | Evaluates gradient-boosted tree classification |
-| CatBoost | Evaluates categorical boosting-based classification |
-| LightGBM | Evaluates gradient boosting with LightGBM |
-| Soft Voting Ensemble | Combines classifier probability estimates |
-| Weighted Voting Ensemble | Combines predictions using model weights |
-| Stacking Ensemble | Learns a combined prediction from base classifiers |
+| Random Forest | Persisted classification model |
+| XGBoost | Gradient-boosted tree classification |
+| CatBoost | Gradient boosting classification |
+| LightGBM | Gradient boosting classification |
+| Logistic Regression | Linear classification baseline |
+| Voting Ensembles | Combines predictions from multiple classifiers |
+| Stacking Ensemble | Combines base-model predictions through a meta-estimator |
 | Classification Threshold | Converts predicted probabilities into class decisions |
 
 ---
@@ -155,64 +160,47 @@ Exoplanet-Classification-Using-Ensemble-Learning/
 
 | File | Description |
 |---|---|
-| `Advanced Exoplanet Classification using Feature Engineering and Ensemble Models.ipynb.ipynb` | Main notebook containing data processing, feature engineering, model experimentation, and evaluation |
-| `rf_exoplanet_model.pkl` | Serialized Random Forest classification model |
-| `feature_scaler.pkl` | Fitted feature scaler used during model preprocessing |
-| `raw_feature_columns.pkl` | Persisted raw feature schema used by the pipeline |
-| `selected_feature_columns.pkl` | Names of the selected engineered features |
-| `dropped_correlated_features.pkl` | Features removed during correlation-based reduction |
+| `Advanced Exoplanet Classification using Feature Engineering and Ensemble Models.ipynb.ipynb` | Main notebook containing data processing, feature engineering, model experiments, and evaluation |
+| `rf_exoplanet_model.pkl` | Serialized Random Forest classifier |
+| `feature_scaler.pkl` | Persisted feature scaling transformation |
+| `raw_feature_columns.pkl` | Stored raw input feature schema |
+| `selected_feature_columns.pkl` | Names of selected engineered features |
+| `dropped_correlated_features.pkl` | Features recorded as removed during correlation-based reduction |
 | `best_threshold.txt` | Stored classification threshold |
-| `pipeline_info.json` | Model metadata, selected features, threshold, and dataset dimensions |
-| `model_results.csv` | Comparative model evaluation metrics |
+| `pipeline_info.json` | Model metadata, recorded ROC-AUC, threshold, selected features, removed features, and data dimensions |
+| `model_results.csv` | Comparative classification results |
 | `ablation_results.csv` | Evaluation results for different feature groups |
-| `noise_results.csv` | ROC-AUC measurements from noise robustness experiments |
+| `noise_results.csv` | Recorded noise robustness experiment results |
 | `catboost_info/` | CatBoost training logs and metadata |
 
-The repository does not contain a separate inference API or application entry point. The notebook is the primary implementation and experimentation interface.
+The notebook is the primary training and experimentation entry point. The repository does not currently include a separate inference script or web application.
 
 ---
 
-## Dataset
+## Dataset and Input Representation
 
-The project uses the Kepler-labelled time-series dataset associated with the Kaggle dataset **Exoplanet Hunting in Deep Space**.
+The repository contains the notebook, trained model artifacts, feature metadata, and experiment results. The original input dataset files are not included in the repository listing.
 
-Dataset source:
+The dataset's exact provenance, external source, and original class-label mapping should be confirmed from the notebook's data-loading and preprocessing cells before being documented.
 
-https://www.kaggle.com/datasets/keplersmachines/kepler-labelled-time-series-data
+### Recorded Data Dimensions
 
-The dataset contains stellar brightness measurements recorded across successive observation intervals. Each observation represents a star, with its light curve represented by a sequence of flux measurements.
+The committed `pipeline_info.json` contains the following dimensions:
 
-The repository does not list the original training and test CSV files, so they must be obtained separately before reproducing the complete training workflow.
+| Dataset Partition | Recorded Shape |
+|---|---:|
+| Training data | 5,087 × 3,197 |
+| Test data | 570 × 3,197 |
 
-### Dataset Characteristics
+These values are taken from the saved pipeline metadata. They describe the recorded training and test input dimensions; they do not independently establish the dataset's source or class distribution.
 
-| Property | Training Dataset | Test Dataset |
-|---|---:|---:|
-| Observations | 5,087 | 570 |
-| Raw flux measurements per observation | 3,197 | 3,197 |
-| Confirmed exoplanet observations | 37 | 5 |
-| Non-exoplanet observations | 5,050 | 565 |
+### Input Representation
 
-The dataset has a significant class imbalance, with confirmed exoplanet observations representing a small fraction of the available examples.
+The saved feature metadata indicates that the model workflow extracts a compact set of engineered features from a larger input representation.
 
-This imbalance is an important consideration when interpreting classification accuracy and selecting an appropriate decision threshold.
+The selected feature names include statistical descriptors, frequency-domain features, peak characteristics, and signal-difference measurements.
 
-### Target Variable
-
-The original dataset uses the following labels:
-
-| Original Label | Meaning |
-|---|---|
-| `1` | Non-exoplanet star |
-| `2` | Star with a confirmed exoplanet |
-
-The notebook's label preprocessing determines how these values are represented internally by the trained classifier.
-
-### Input Data
-
-Each stellar observation contains a sequence of 3,197 flux measurements. These values represent changes in measured stellar brightness over the observation period.
-
-The feature engineering pipeline transforms the raw measurements into a more compact representation of the light curve, enabling conventional machine learning algorithms to operate on extracted statistical and signal-processing features.
+Before reproducing the training workflow, inspect the notebook's data-loading cells to identify the required input files, expected paths, preprocessing steps, and original target-label definitions.
 
 ---
 
@@ -220,78 +208,77 @@ The feature engineering pipeline transforms the raw measurements into a more com
 
 ### End-to-End Pipeline Overview
 
-1. Load and inspect the stellar light-curve dataset.
-2. Separate classification labels from flux measurements.
-3. Perform exploratory data analysis and inspect class distribution.
-4. Extract statistical descriptors from each flux sequence.
-5. Calculate frequency-domain characteristics using Fourier analysis.
+1. Load the input dataset and inspect its structure.
+2. Separate classification targets from input measurements.
+3. Perform exploratory analysis and inspect the class distribution.
+4. Extract statistical features from the input measurements.
+5. Calculate frequency-domain features using Fourier analysis.
 6. Generate peak-based and signal-difference features.
 7. Identify and remove correlated engineered features.
-8. Establish consistent feature ordering and scaling.
-9. Train and evaluate multiple classification algorithms.
-10. Compare Random Forest, boosting algorithms, and ensemble methods.
-11. Evaluate classification metrics and decision thresholds.
-12. Perform feature-group ablation experiments.
-13. Investigate classification performance under injected noise.
-14. Save model artifacts, feature metadata, and evaluation results.
+8. Preserve consistent feature names and column ordering.
+9. Apply the feature scaling transformation.
+10. Train and evaluate individual classification models.
+11. Compare voting and stacking ensemble configurations.
+12. Evaluate classification metrics and decision thresholds.
+13. Perform feature-group ablation experiments.
+14. Evaluate recorded performance under injected noise.
+15. Persist model artifacts, metadata, and evaluation results.
 
 ---
 
 ## Feature Engineering Methodology
 
-The feature engineering pipeline transforms each stellar light curve into a structured feature vector that captures multiple characteristics of the observed signal.
+The project uses engineered features to represent different characteristics of the input signal.
 
 ### Statistical Features
 
-Statistical features summarize the distribution and variability of flux measurements.
+Statistical descriptors summarize the distribution and variability of the measurements.
 
 | Feature | Description |
 |---|---|
-| `mean` | Average flux value |
-| `std` | Standard deviation of flux measurements |
-| `min` | Minimum observed flux |
-| `max` | Maximum observed flux |
-| `median` | Median flux value |
-| `skew` | Measure of distribution asymmetry |
-| `kurtosis` | Measure of distribution tail characteristics |
-| `q25` | First quartile of flux values |
-| `q75` | Third quartile of flux values |
+| `mean` | Mean of the input measurements |
+| `std` | Standard deviation |
+| `min` | Minimum value |
+| `max` | Maximum value |
+| `median` | Median value |
+| `skew` | Distribution asymmetry |
+| `kurtosis` | Distribution tail characteristics |
+| `q25` | First quartile |
+| `q75` | Third quartile |
 | `energy` | Aggregate signal energy |
-
-These features characterize the overall distribution and variability of a star's observed brightness.
 
 ### Frequency-Domain Features
 
-Fourier Transform-based analysis provides information about the frequency composition of the signal.
+Fourier Transform-based analysis produces features that characterize the frequency composition of the input signal.
 
 | Feature | Description |
 |---|---|
 | `fft_mean` | Mean of the computed frequency-domain representation |
 | `fft_peak_freq` | Frequency associated with the dominant detected spectral peak |
 
-Frequency-domain features provide an alternative representation of light-curve patterns that may not be fully characterized by distribution statistics alone.
-
 ### Peak-Based Features
 
-Peak-based features characterize prominent structures in the signal.
+Peak-based descriptors characterize prominent structures detected in the signal.
 
 | Feature | Description |
 |---|---|
 | `num_peaks` | Number of detected peaks |
-| `peak_mean` | Average value of detected peaks |
+| `peak_mean` | Mean value of detected peaks |
 | `peak_min` | Minimum value among detected peaks |
 
 ### Signal-Difference Features
 
-Difference-based features describe changes between consecutive flux measurements.
+Difference-based features describe variation between consecutive measurements.
 
 | Feature | Description |
 |---|---|
 | `mean_abs_diff` | Mean absolute difference between consecutive observations |
 | `diff_energy` | Aggregate energy of the difference signal |
-| `zero_crossings` | Number of zero crossings under the implemented feature definition |
+| `zero_crossings` | Number of zero crossings according to the implemented feature definition |
 
-Together, these features provide a compact representation of the original stellar brightness sequence.
+These feature groups provide complementary representations of distribution, frequency, peak, and variation characteristics.
+
+The exact calculations and parameter choices are defined in the notebook.
 
 ---
 
@@ -299,29 +286,33 @@ Together, these features provide a compact representation of the original stella
 
 ### Correlation-Based Feature Reduction
 
-Highly correlated features can introduce redundancy into a feature set. The project identifies correlated engineered features and persists the dropped feature names in `dropped_correlated_features.pkl`.
+The project records features removed during correlation-based reduction in `dropped_correlated_features.pkl`.
 
-The persisted metadata records the following features as removed:
+The persisted metadata identifies the following features as removed:
 
-- `range`
-- `iqr`
-- `mad`
-- `rms`
-- `fft_std`
-- `fft_max`
-- `fft_p90`
-- `fft_p95`
-- `fft_p99`
-- `peak_std`
-- `peak_max`
-- `std_diff`
-- `max_abs_diff`
+```text
+range
+iqr
+mad
+rms
+fft_std
+fft_max
+fft_p90
+fft_p95
+fft_p99
+peak_std
+peak_max
+std_diff
+max_abs_diff
+```
 
-The exact feature-generation and removal procedure is implemented in the notebook.
+Removing redundant features can reduce feature dimensionality and limit duplication of similar information.
+
+The notebook remains the reference for the exact correlation calculation, threshold, and removal procedure.
 
 ### Selected Features
 
-The saved pipeline metadata identifies 18 selected engineered features:
+The committed `pipeline_info.json` records the following 18 selected features:
 
 ```text
 mean
@@ -344,58 +335,60 @@ mean_abs_diff
 diff_energy
 ```
 
-These features represent statistical properties, frequency characteristics, peak information, and signal variation.
+These features capture statistical properties, frequency characteristics, peak information, and signal variation.
 
 ### Feature Scaling
 
-The serialized `feature_scaler.pkl` artifact stores a fitted scaling transformation used by the model workflow.
+The repository contains `feature_scaler.pkl`, which stores a fitted feature scaling transformation.
 
-The same preprocessing sequence, feature definitions, and column ordering must be preserved when applying the model to new observations.
+For compatible inference, the same feature definitions, selected columns, column ordering, and scaling procedure used during training must be preserved.
+
+The saved metadata and feature artifacts should be used together with the classifier rather than treating the model file as a complete preprocessing pipeline.
 
 ---
 
 ## Classification Models
 
-The project evaluates several individual classifiers and ensemble configurations.
+The recorded comparative results cover the following individual models and ensemble configurations.
 
 | Model | Role |
 |---|---|
-| Random Forest | Tree-based classification and persisted inference model |
-| XGBoost | Gradient-boosted decision tree classification |
-| CatBoost | Gradient boosting classification |
-| LightGBM | Gradient boosting classification |
+| Random Forest | Tree-based classifier and persisted model |
+| XGBoost | Gradient-boosted tree classifier |
+| CatBoost | Gradient boosting classifier |
+| LightGBM | Gradient boosting classifier |
 | Logistic Regression | Linear classification baseline |
-| Soft Voting Ensemble | Combines predicted class probabilities |
-| Weighted Voting Ensemble | Combines model predictions using weighted contributions |
-| Stacking Ensemble | Combines base classifiers through a meta-estimator |
+| Soft Voting Ensemble | Combines model probability estimates |
+| Weighted Voting Ensemble | Combines predictions using weighted contributions |
+| Stacking Ensemble | Combines base-model predictions using a meta-estimator |
 
-The saved `pipeline_info.json` identifies Random Forest as the best model according to its recorded ROC-AUC value.
+The committed `pipeline_info.json` identifies Random Forest as the selected model and records a ROC-AUC of approximately `0.9949`.
 
-The persisted model artifact is `rf_exoplanet_model.pkl`. The other models appear in the comparative evaluation outputs; the repository listing does not show separate serialized artifacts for each of them.
+The repository contains a serialized Random Forest model. Separate serialized artifacts for all the other evaluated classifiers are not listed in the repository.
 
 ---
 
 ## Evaluation Framework
 
-The project evaluates classification performance using multiple metrics.
+The project records multiple classification metrics to assess model performance.
 
 | Metric | Purpose |
 |---|---|
-| Accuracy | Proportion of all observations classified correctly |
-| Precision | Proportion of predicted positive observations that are positive |
+| Accuracy | Proportion of observations classified correctly |
+| Precision | Reliability of positive predictions |
 | Recall | Proportion of actual positive observations detected |
 | F1 Score | Harmonic mean of precision and recall |
 | ROC-AUC | Measures class discrimination across probability thresholds |
 
-Because confirmed exoplanet observations are rare in the dataset, accuracy alone is insufficient to assess model effectiveness.
+Accuracy alone can be misleading when class distributions are imbalanced or when missing positive cases has a significant impact.
 
-Precision, recall, F1 score, and ROC-AUC provide additional information about false-positive behavior, missed positive observations, and ranking performance.
+Precision, recall, F1 score, and ROC-AUC should therefore be considered together when comparing classification configurations.
 
 ---
 
 ## Results Snapshot
 
-The committed `model_results.csv` file contains the following recorded evaluation results. The classification metrics shown below use the threshold values recorded in that file.
+The following values are recorded in the repository's `model_results.csv`. The listed precision, recall, F1, and accuracy values correspond to the threshold recorded in that file.
 
 | Model | ROC-AUC | Accuracy | Precision | Recall | F1 Score |
 |---|---:|---:|---:|---:|---:|
@@ -408,39 +401,45 @@ The committed `model_results.csv` file contains the following recorded evaluatio
 | Logistic Regression | 0.8945 | 0.6860 | 0.0272 | 1.0000 | 0.0529 |
 | LightGBM | 0.8931 | 0.9912 | 0.0000 | 0.0000 | 0.0000 |
 
-These results are taken from the committed experiment output and have not been independently reproduced for this README.
+These are recorded experiment results and have not been independently reproduced for this documentation.
 
 ### Results Interpretation
 
 - Random Forest has the highest recorded ROC-AUC among the models listed.
-- The weighted ensemble records higher accuracy and F1 score than Random Forest at the threshold shown in the results file.
-- The ensemble's recall of `0.60` indicates that it detects only a proportion of the positive examples.
-- Logistic Regression and LightGBM illustrate why accuracy alone can be misleading when the positive class is rare.
-- The small number of positive examples in the test set makes individual metric values sensitive to even a few additional false negatives or true positives.
+- The weighted ensemble records higher accuracy and F1 score than Random Forest at the threshold used in the comparison.
+- The recorded Random Forest recall of `0.4000` indicates that its classification results warrant closer examination of missed positive observations.
+- Logistic Regression and LightGBM demonstrate why accuracy should not be interpreted in isolation.
+- The model-selection decision should account for the intended classification objective, the class-label mapping, and the relative costs of false positives and false negatives.
 
-The evaluation results should therefore be interpreted alongside class imbalance and threshold selection rather than as standalone evidence of generalization.
+The results should be validated using the notebook's evaluation procedure before being treated as independently reproduced performance.
 
 ---
 
 ## Classification Threshold
 
-The repository includes a `best_threshold.txt` artifact containing the following threshold:
+The repository contains a `best_threshold.txt` artifact with the following value:
 
 ```text
 0.16
 ```
 
-The threshold determines how predicted probabilities are converted into binary classification decisions.
+The saved `pipeline_info.json` also records a threshold of `0.16`.
 
-A lower threshold may increase positive-class recall while also increasing the number of false-positive predictions. Threshold selection should be based on the desired trade-off between precision and recall.
+A classification threshold determines how predicted probabilities are converted into class decisions. Adjusting the threshold changes the trade-off between positive-class recall and precision.
 
-**Reproducibility note:** The saved `model_results.csv` lists a threshold of `0.5` for its model comparisons, whereas `best_threshold.txt` and `pipeline_info.json` record `0.16`. Re-evaluate the saved Random Forest model at the selected threshold before treating the threshold-specific classification metrics as final. The threshold should be selected using validation data rather than optimized directly on the test set.
+A lower threshold can increase positive predictions, potentially improving recall while also increasing false positives.
+
+### Threshold Consistency
+
+The committed `model_results.csv` records a threshold of `0.5` for the listed model comparisons, while the saved threshold artifact records `0.16`.
+
+These values represent different recorded configurations. Re-evaluate the selected classifier using the intended threshold before reporting threshold-specific performance. For reliable evaluation, threshold selection should be performed using validation data rather than optimized directly on the final test set.
 
 ---
 
 ## Ablation Analysis
 
-The repository includes `ablation_results.csv`, which records the performance of different engineered feature groups.
+The repository contains `ablation_results.csv`, which records classification performance for different feature groups.
 
 | Feature Set | ROC-AUC | Accuracy | F1 Score |
 |---|---:|---:|---:|
@@ -450,17 +449,17 @@ The repository includes `ablation_results.csv`, which records the performance of
 | Statistical + FFT + Peak | 0.9885 | 0.9947 | 0.5714 |
 | Statistical + FFT | 0.9821 | 0.9947 | 0.5714 |
 
-The recorded experiments compare how different groups of engineered features influence classification performance.
+The recorded experiments compare the predictive performance of different engineered feature groups.
 
-The results suggest that statistical descriptors alone provide substantial discrimination in this experiment, while combining them with additional signal-processing features produces different ROC-AUC values.
+The results indicate that statistical features provide substantial discrimination in the evaluated configuration. Adding other feature groups changes ROC-AUC, while the listed accuracy and F1 values remain unchanged.
 
-These results are specific to the recorded experiment configuration and should not be interpreted as proof that an individual feature group will perform best on other datasets.
+These are results from the committed experiment output and should be interpreted within the context of its evaluation procedure.
 
 ---
 
 ## Noise Robustness Analysis
 
-The repository contains `noise_results.csv`, which records ROC-AUC values for different noise levels.
+The repository includes `noise_results.csv`, which records ROC-AUC values for different noise levels.
 
 | Noise Level | Recorded ROC-AUC |
 |---|---:|
@@ -469,31 +468,31 @@ The repository contains `noise_results.csv`, which records ROC-AUC values for di
 | 0.10 | 0.9411 |
 | 0.20 | 0.7172 |
 
-The results indicate that the evaluated model's discrimination performance decreases substantially at the highest recorded noise level.
+The recorded results show a decrease in ROC-AUC at the highest listed noise level.
 
-The non-monotonic values at lower noise levels may reflect experimental variability. Further repeated experiments with fixed random seeds and documented perturbation procedures would help establish a more reliable characterization of noise sensitivity.
+The values at lower noise levels are not strictly monotonic. Repeated experiments with controlled random seeds and documented perturbation procedures would help establish a more reliable assessment of noise sensitivity.
 
 ---
 
 ## Model Artifacts
 
-The repository contains the following persisted components.
+The repository contains the following persisted model and preprocessing components.
 
 | Artifact | Description |
 |---|---|
 | `rf_exoplanet_model.pkl` | Trained Random Forest classifier |
 | `feature_scaler.pkl` | Fitted feature scaling transformation |
-| `raw_feature_columns.pkl` | Expected raw input feature schema |
+| `raw_feature_columns.pkl` | Expected raw feature schema |
 | `selected_feature_columns.pkl` | Selected engineered feature names |
-| `dropped_correlated_features.pkl` | Features excluded during correlation reduction |
+| `dropped_correlated_features.pkl` | Feature names recorded as removed |
 | `best_threshold.txt` | Stored classification threshold |
-| `pipeline_info.json` | Model identity, ROC-AUC, threshold, feature metadata, and data dimensions |
+| `pipeline_info.json` | Model selection, recorded ROC-AUC, threshold, feature metadata, and data dimensions |
 
-For inference, the input must undergo the same feature engineering, column alignment, feature reduction, and scaling sequence used during training.
+For compatible inference, new observations must be transformed using the same feature engineering, feature selection, column alignment, and scaling sequence used during training.
 
-A serialized estimator alone is not sufficient to reproduce the pipeline if the surrounding transformations are applied differently.
+The repository does not currently provide a separate inference script that wraps all of these steps into a single callable interface.
 
-**Security note:** Pickle files can execute arbitrary code during deserialization. Only load model artifacts from trusted sources, and use compatible library versions when loading persisted estimators and scalers.
+**Security note:** Pickle files can execute code when deserialized. Only load artifacts from trusted sources. Compatibility between the library versions used during training and inference should also be verified.
 
 ---
 
@@ -525,94 +524,97 @@ source venv/bin/activate
 
 ### Install Dependencies
 
-The repository listing does not currently include a `requirements.txt` file. The following command installs the principal libraries used for the documented data processing and model experiments:
+The repository listing does not currently include a `requirements.txt` file.
+
+Install the principal libraries used by the documented modeling workflow:
 
 ```bash
 python -m pip install --upgrade pip
 
-pip install numpy pandas scipy matplotlib seaborn scikit-learn joblib xgboost lightgbm catboost jupyter
+pip install numpy pandas scipy scikit-learn matplotlib seaborn jupyter xgboost lightgbm catboost
 ```
 
-For reproducible experiments, create a `requirements.txt` with the exact dependency versions used to train the saved artifacts.
+The exact dependency versions have not been pinned in the repository. For reproducible training and model loading, record and use the package versions from the environment in which the artifacts were generated.
 
 ---
 
 ## Usage
 
-### Obtain the Dataset
+### Prepare the Input Data
 
-Download the Kepler-labelled time-series dataset from Kaggle:
+The original input data files are not included in the repository listing.
 
-https://www.kaggle.com/datasets/keplersmachines/kepler-labelled-time-series-data
+Before running the training notebook:
 
-Obtain the required training and test CSV files, commonly named:
+1. Open the notebook and inspect its data-loading cells.
+2. Identify the original input files and expected file paths.
+3. Obtain the required data from its verified source.
+4. Place the files in the expected locations or update the paths in the notebook.
+5. Confirm the target-label mapping and input feature structure before training.
 
-```text
-exoTrain.csv
-exoTest.csv
-```
-
-Place the files in the locations expected by the notebook. If your directory structure differs from the notebook's configured paths, update the relevant data-loading cells.
+No external dataset source is specified here because the repository metadata alone does not establish the original dataset's provenance.
 
 ### Launch Jupyter Notebook
 
-From the repository root, execute:
+From the repository root, run:
 
 ```bash
 jupyter notebook
 ```
 
-Open:
+Open the main notebook:
 
 ```text
 Advanced Exoplanet Classification using Feature Engineering and Ensemble Models.ipynb.ipynb
 ```
 
-Run the cells sequentially to execute the data preparation, feature engineering, model training, evaluation, and artifact-generation workflow.
+Execute its cells sequentially to run the implemented workflow for data preparation, feature engineering, model experimentation, evaluation, and artifact generation.
 
 ### Using the Persisted Model
 
-The repository provides a serialized Random Forest model and its supporting feature artifacts. However, it does not currently expose a standalone prediction script or REST API.
+The repository provides a trained Random Forest classifier and supporting feature artifacts, but it does not contain a standalone inference script or web service.
 
-To perform reproducible inference:
+To use the saved model with new data, the inference workflow must:
 
-1. Load the trusted model and preprocessing artifacts.
-2. Supply the required raw stellar flux measurements in the expected schema.
-3. Apply the same statistical, frequency-domain, peak-based, and difference-based feature engineering.
-4. Apply the saved feature-selection and scaling transformations in the training-time order.
-5. Generate the classifier's probability or class prediction.
-6. Apply the intended classification threshold when converting probabilities into binary decisions.
+1. Load the trusted model and associated artifacts.
+2. Validate the structure of the input measurements.
+3. Generate the engineered features defined in the notebook.
+4. Align the feature columns with the saved feature schema.
+5. Apply the required feature selection and scaling operations.
+6. Generate class probabilities or predictions using the classifier.
+7. Apply the intended classification threshold when converting probabilities into class decisions.
 
-The exact feature definitions and preprocessing order in the notebook should be treated as the reference implementation.
+The training notebook should be treated as the reference implementation for the required transformations and label mapping.
 
 ---
 
 ## Technology Stack
 
-- **Language:** Python
-- **Data Manipulation:** Pandas, NumPy
+- **Programming Language:** Python
+- **Data Processing:** NumPy, Pandas
 - **Scientific Computing:** SciPy
 - **Machine Learning:** Scikit-learn
 - **Tree-Based Models:** Random Forest, XGBoost, CatBoost, LightGBM
 - **Ensemble Learning:** Voting and stacking classifiers
-- **Signal Processing:** Fourier Transform and statistical time-series analysis
-- **Data Visualization:** Matplotlib, Seaborn
-- **Model Persistence:** Pickle-compatible artifacts
+- **Signal Analysis:** Fourier Transform and statistical signal features
+- **Feature Preprocessing:** StandardScaler and feature-column management
+- **Visualization:** Matplotlib, Seaborn
 - **Experimentation:** Jupyter Notebook
-- **Result Export:** CSV and JSON
+- **Model Persistence:** Pickle-compatible serialized artifacts
+- **Experiment Outputs:** CSV and JSON
 
 ---
 
 ## Engineering Principles
 
-- Consistent feature extraction between training and inference
+- Consistent feature definitions between training and inference
 - Explicit feature schemas and column ordering
 - Correlation-based reduction of redundant features
-- Comparative evaluation of individual models and ensembles
-- Precision, recall, and F1 analysis for imbalanced classification
-- Decision-threshold configuration
-- Ablation experiments for feature-group analysis
-- Noise robustness experiments
+- Comparative evaluation of individual classifiers and ensembles
+- Precision, recall, F1, and ROC-AUC-based performance analysis
+- Explicit classification threshold configuration
+- Feature-group ablation experiments
+- Noise robustness evaluation
 - Model artifact persistence and metadata tracking
 - Reproducible preprocessing and evaluation workflows
 
@@ -620,32 +622,39 @@ The exact feature definitions and preprocessing order in the notebook should be 
 
 ## Future Improvements
 
-- Add a versioned `requirements.txt` for reproducible environments.
-- Document the exact feature engineering and prediction APIs.
-- Package preprocessing and classification into a single reusable pipeline.
-- Add automated tests for feature ordering and transformation consistency.
-- Evaluate class-weighting and resampling strategies for the imbalanced target.
-- Perform threshold optimization using a dedicated validation set.
-- Report precision-recall curves and average precision alongside ROC-AUC.
-- Re-run evaluation with repeated stratified splits or cross-validation.
-- Validate results on independent astronomical datasets.
-- Quantify feature importance and add model interpretation using SHAP.
-- Add a standalone inference script for new stellar light curves.
-- Add an optional FastAPI or Flask service for programmatic prediction.
-- Track experiments and model versions with a reproducible configuration.
-- Expand robustness testing across multiple controlled noise distributions.
+- Add a version-controlled `requirements.txt` with tested dependency versions.
+- Document the verified dataset source and original class-label mapping.
+- Package feature engineering, scaling, and classification into a reusable pipeline.
+- Add a standalone inference script for new observations.
+- Add automated tests for feature extraction, column ordering, and preprocessing consistency.
+- Evaluate class-weighting strategies for imbalanced classification.
+- Select classification thresholds using a dedicated validation dataset.
+- Include precision-recall curves and average precision in model evaluation.
+- Reproduce results using repeated stratified splits or cross-validation.
+- Validate the pipeline on independent astronomical datasets.
+- Add feature-importance analysis and model interpretation using SHAP.
+- Track training configurations and model versions.
+- Add experiment logging and automated evaluation checks.
+- Investigate performance changes under repeated controlled noise experiments.
+- Provide an optional FastAPI or Flask interface for programmatic inference.
 
 ---
 
 ## Limitations
 
-- Confirmed exoplanet observations form a very small fraction of the training and test datasets.
-- High accuracy can occur even when a classifier misses a substantial fraction of positive observations.
-- The test set contains only five confirmed exoplanet examples, limiting the stability of its recall and F1 estimates.
-- Feature engineering and classification results depend on the input data format and preprocessing implementation.
-- The repository does not include the original dataset files or a dedicated production inference service.
-- Recorded evaluation metrics have not been independently reproduced for this documentation.
-- Successful classification of a historical dataset does not establish performance on new astronomical observations.
+- The original dataset and its source are not documented here because their provenance has not been independently verified.
+- Dataset class distribution and label semantics must be confirmed from the notebook before reproducing the experiments.
+- High accuracy does not necessarily indicate reliable detection of the positive class.
+- Recorded metrics have not been independently reproduced for this README.
+- The saved classification threshold differs from the threshold recorded in the model comparison results.
+- The repository does not include a standalone inference application.
+- Model performance on the recorded dataset does not establish generalization to new astronomical observations.
+
+---
+
+## License
+
+This project is intended to be released under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
 
